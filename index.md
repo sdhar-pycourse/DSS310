@@ -5,5 +5,5 @@ Watch out for interesting Content!
 
 ## Important Links
 <ol>
-  <li>https://github.com/sdhar-pycourse/DSS310.git</li>
+  <li>https://github.com/sdhar-pycourse/DSS310/tree/main/SQLiteDBS</li>
 </ol>
