@@ -57,7 +57,7 @@ Examples:
 
 _Find all the records where AGE is greater than or equal to 25 AND salary is greater than or equal to 65000.00_
 
-``sql
+```sql
 SELECT * FROM COMPANY WHERE AGE >= 25 AND SALARY >= 65000;
 ```
 
