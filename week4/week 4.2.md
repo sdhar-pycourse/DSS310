@@ -11,4 +11,4 @@ GROUP BY BillingCity
 HAVING sum(Total) > 30
 LIMIT 5
 ```
-[![order]](https://jvns.ca/images/sql-queries.jpeg)
+![order](https://jvns.ca/images/sql-queries.jpeg)
