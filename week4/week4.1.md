@@ -56,14 +56,6 @@ The WHERE clause not only is used in SELECT statement, but it is also used in UP
 Examples:
 _Find all the records where AGE is greater than or equal to 25 AND salary is greater than or equal to 65000.00_
 
-``sql
-SELECT * FROM COMPANY WHERE AGE >= 25 AND SALARY >= 65000;
-```
-_Find all the records where AGE is not NULL, which means all the records because none of the record has AGE equal to NULL_
-
-```sql
-SELECT * FROM COMPANY WHERE AGE IS NOT NULL;
-```
 ## UPDATE
 UPDATE Query is used to modify the existing records in a table. You can use WHERE clause with UPDATE query to update selected rows, otherwise all the rows would be updated
 E.g. Update ADDRESS for a customer whose ID is 6
