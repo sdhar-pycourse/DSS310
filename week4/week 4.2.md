@@ -11,4 +11,11 @@ GROUP BY BillingCity
 HAVING sum(Total) > 30
 LIMIT 5
 ```
-![order](https://jvns.ca/images/sql-queries.jpeg)
+## Order of Execution
+1. FROM/JOIN and all the ON conditions
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT (including window functions)
+6. ORDER BY
+7. LIMIT
