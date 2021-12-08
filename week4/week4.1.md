@@ -1,5 +1,7 @@
 # Week 4 DDL/ DML syntax
-
+## CREATE TABLE
+CREATE TABLE statement is used to create a new table in any of the given database. Creating a basic table involves naming the table and defining its columns and each column's data type.
+A unique name for the table needs to follow the CREATE TABLE statement. You can specify _database_nam_e along with _table_name_
 
 ```sql
 CREATE TABLE COMPANY(
