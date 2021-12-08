@@ -57,6 +57,11 @@ Examples:
 
 _Find all the records where AGE is greater than or equal to 25 AND salary is greater than or equal to 65000.00_
 
+``sql
+SELECT * FROM COMPANY WHERE AGE >= 25 AND SALARY >= 65000;
+```
+
+
 ## UPDATE
 UPDATE Query is used to modify the existing records in a table. You can use WHERE clause with UPDATE query to update selected rows, otherwise all the rows would be updated
 E.g. Update ADDRESS for a customer whose ID is 6
