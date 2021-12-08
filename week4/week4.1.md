@@ -54,6 +54,7 @@ SQLite WHERE clause is used to specify a condition while fetching the data from 
 If the given condition is satisfied, means true, then it returns the specific value from the table. You will have to use WHERE clause to filter the records and fetching only necessary records.
 The WHERE clause not only is used in SELECT statement, but it is also used in UPDATE, DELETE statement, etc., which will be covered in subsequent chapters.
 Examples:
+
 _Find all the records where AGE is greater than or equal to 25 AND salary is greater than or equal to 65000.00_
 
 ## UPDATE
