@@ -40,6 +40,13 @@ VALUES (5, 'David', 27, 'Texas', 85000.00 );
 
 INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (6, 'Kim', 22, 'South-Hall', 45000.00 );
+
+```
+## SELECT STATEMENT
+This is categorized as a DQL but is required to inspect data in any table. Hence this is being talked about here ahead of time
+SELECT statement is used to fetch the data from a SQLite database table which returns data in the form of a result table. These result tables are also called result sets
+```sql
+SELECT * FROM COMPANY;
 ```
 ## UPDATE
 UPDATE Query is used to modify the existing records in a table. You can use WHERE clause with UPDATE query to update selected rows, otherwise all the rows would be updated
