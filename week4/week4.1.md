@@ -41,10 +41,13 @@ VALUES (5, 'David', 27, 'Texas', 85000.00 );
 INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (6, 'Kim', 22, 'South-Hall', 45000.00 );
 ```
-
+## UPDATE
+UPDATE Query is used to modify the existing records in a table. You can use WHERE clause with UPDATE query to update selected rows, otherwise all the rows would be updated
+E.g. Update ADDRESS for a customer whose ID is 6
 ```sql
+UPDATE COMPANY SET ADDRESS = 'Texas' WHERE ID = 6;
 ```
-
-```
-
+To modify ALL rows of data with a single value you do not need to use WHERE clause and UPDATE query. E.g. ADDRESS and SALARY column values in COMPANY table,
+```sql
+UPDATE COMPANY SET ADDRESS = 'Texas', SALARY = 20000.00;
 ```
