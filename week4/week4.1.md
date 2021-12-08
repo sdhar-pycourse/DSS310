@@ -12,7 +12,7 @@ CREATE TABLE COMPANY(
 ```
 
 
-```
+```sql
 INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (1, 'Paul', 32, 'California', 20000.00 );
 
@@ -32,7 +32,7 @@ INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (6, 'Kim', 22, 'South-Hall', 45000.00 );
 ```
 
-```
+```sql
 ```
 
 ```
