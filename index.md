@@ -6,5 +6,5 @@ Watch out for interesting Content!
 
 ## Important Links
 <ol>
-  <li><h6><a href="https://github.com/sdhar-pycourse/DSS310/tree/main/SQLiteDBS">SQLiteDBs</a></h6></li>
+  <li><h4><a href="https://github.com/sdhar-pycourse/DSS310/tree/main/SQLiteDBS">SQLiteDBs</a></h4></li>
 </ol>
