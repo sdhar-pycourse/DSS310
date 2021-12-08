@@ -60,7 +60,11 @@ _Find all the records where AGE is greater than or equal to 25 AND salary is gre
 ```sql
 SELECT * FROM COMPANY WHERE AGE >= 25 AND SALARY >= 65000;
 ```
+_Find all the records where AGE is not NULL, which means all the records because none of the record has AGE equal to NULL_
 
+```sql
+SELECT * FROM COMPANY WHERE AGE IS NOT NULL;
+```
 
 ## UPDATE
 UPDATE Query is used to modify the existing records in a table. You can use WHERE clause with UPDATE query to update selected rows, otherwise all the rows would be updated
