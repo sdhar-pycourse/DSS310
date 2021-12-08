@@ -58,3 +58,12 @@ To modify ALL rows of data with a single value you do not need to use WHERE clau
 ```sql
 UPDATE COMPANY SET ADDRESS = 'Texas', SALARY = 20000.00;
 ```
+## DELETE
+DELETE Query is used to delete the existing records from a table. You can use WHERE clause with DELETE query to delete the selected rows, otherwise all the records would be deleted
+ ```sql
+ DELETE FROM COMPANY WHERE ID = 7;
+ ```
+ DELETING without a WHERE statement deletes the content of the table
+ ```sql
+ DELETE FROM COMPANY;
+ ```
