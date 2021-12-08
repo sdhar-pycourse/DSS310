@@ -12,7 +12,13 @@ CREATE TABLE COMPANY(
    SALARY         REAL
 );
 ```
+## DROP TABLE
+DROP TABLE statement is used to remove a table definition and all associated data, indexes, triggers, constraints, and permission specifications for that table.
 
+**You must be careful while using this command because once a table is deleted then all the information available in the table would also be lost forever.**
+```sql
+DROP TABLE COMPANY;
+```
 
 ```sql
 INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
