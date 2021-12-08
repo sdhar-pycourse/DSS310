@@ -45,6 +45,7 @@ VALUES (6, 'Kim', 22, 'South-Hall', 45000.00 );
 ## SELECT STATEMENT
 This is categorized as a DQL but is required to inspect data in any table. Hence this is being talked about here ahead of time
 SELECT statement is used to fetch the data from a SQLite database table which returns data in the form of a result table. These result tables are also called result sets
+
 ```sql
 SELECT * FROM COMPANY;
 ```
@@ -54,10 +55,12 @@ If the given condition is satisfied, means true, then it returns the specific va
 The WHERE clause not only is used in SELECT statement, but it is also used in UPDATE, DELETE statement, etc., which will be covered in subsequent chapters.
 Examples:
 _Find all the records where AGE is greater than or equal to 25 AND salary is greater than or equal to 65000.00_
+
 ``sql
 SELECT * FROM COMPANY WHERE AGE >= 25 AND SALARY >= 65000;
 ```
 _Find all the records where AGE is not NULL, which means all the records because none of the record has AGE equal to NULL_
+
 ```sql
 SELECT * FROM COMPANY WHERE AGE IS NOT NULL;
 ```
