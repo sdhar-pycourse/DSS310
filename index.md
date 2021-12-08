@@ -7,4 +7,5 @@ Watch out for interesting Content!
 ## Important Links
 <ol>
   <li><h3><a href="https://github.com/sdhar-pycourse/DSS310/tree/main/SQLiteDBS">SQLiteDBs</a></h3></li>
+  <li><h3><a href="https://github.com/sdhar-pycourse/DSS310/tree/main/SQLiteDBS">Week 4 DDL/DML</a></h3></li>
 </ol>
