@@ -72,6 +72,8 @@ The DISTINCT operation takes place after the SELECT. When using the DISTINCT key
 ### ORDER BY clause
 Sorting takes place once the database has the entire result set ready (after filtering, grouping, duplication removal). Once we have that, the database can now sort the result set using columns, selected aliases, or aggregation functions, even if they aren't part of the selected data. 
 
+You can choose to sort the data using a descending (DESC) order or an ascending (ASC) order. The order can be unique for each of the order parts, so the following is valid: ORDER BY firstname ASC, age DESC
+
 ```sql
 SELECT BillingCity, sum(Total) as TotalInvoiceValue, count(distinct InvoiceId) as Invoices
 FROM invoices 
@@ -80,4 +82,18 @@ GROUP BY BillingCity
 HAVING sum(Total) > 30
 ORDER BY count(distinct InvoiceId) DESC
 ```
+
+### LIMIT and OFFSET
+In most use cases (excluding a few like reporting), we would want to discard all rows but the first X rows of the query's result. The LIMIT clause, which is executed after sorting, allows us to do just that. In addition, you can choose which row to start fetching the data from and how many to exclude, using a combination of the LIMIT and OFFSET keywords. 
+
+```sql
+SELECT BillingCity, sum(Total) as TotalInvoiceValue, count(distinct InvoiceId) as Invoices
+FROM invoices 
+WHERE BillingCountry= 'USA'
+GROUP BY BillingCity
+HAVING sum(Total) > 30
+ORDER BY count(distinct InvoiceId) DESC
+LIMIT 5
+```
+
 
