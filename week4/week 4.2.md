@@ -30,7 +30,7 @@ FROM invoices
 The WHERE clause will be the second to be evaluated, after the FROM clause. We have the working data set in place, and now we can filter the data according to the conditions in the WHERE clause. Some database's optimizer will choose to evaluate the WHERE part first, to see which part of the working set can be left out (preferably using indexes), so it won't inflate the data set too much if it doesn't really have to.
 
 ```sql
-SELECT BillingCity, sum(Total) as TotalInvoiceValue
+SELECT BillingCity
 FROM invoices 
 WHERE BillingCountry= 'USA'
 ```
@@ -44,7 +44,7 @@ Now that we filtered the data set using the WHERE clause, we can aggregate the d
 - Rolls up milion of rows of data to few human readable rows for insights
 
 ```sql
-SELECT BillingCity, sum(Total) as TotalInvoiceValue
+SELECT BillingCity, sum(Total) as TotalInvoiceValue, count(distinct InvoiceId) as Invoices
 FROM invoices 
 WHERE BillingCountry= 'USA'
 GROUP BY BillingCity
