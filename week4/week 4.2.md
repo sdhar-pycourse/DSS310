@@ -97,6 +97,6 @@ LIMIT 5
 ```
 
 ## Advanced Topics
-We get to [Window Functions](https://www.sqlitetutorial.net/sqlite-window-functions/) afer we have mastered basic SQL syntax. It is important to mention that Window function is applied once the data columns are retrieved via the SELECT statement
+We get to [Window Functions](https://www.sqlitetutorial.net/sqlite-window-functions/) after we have mastered basic SQL syntax. It is important to mention that Window function is applied once the data columns are retrieved via the SELECT statement
 
 
