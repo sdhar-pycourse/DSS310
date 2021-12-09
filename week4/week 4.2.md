@@ -16,6 +16,7 @@ LIMIT 5
 ## Order of Execution
 ![order](https://learnsql.com/blog/sql-order-of-operations/1.png)
 ###FROM and JOINs
+
 The tables specified in the FROM clause (including JOINs), will be evaluated first, to determine the entire working set which is relevant for the query. The database will merge the data from all tables, according to the JOINs ON clauses
 
 ```sql
