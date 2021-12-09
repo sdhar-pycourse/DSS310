@@ -14,6 +14,7 @@ HAVING sum(Total) > 30
 LIMIT 5
 ```
 ## Order of Execution
+![order](https://learnsql.com/blog/sql-order-of-operations/1.png)
 1. `FROM/JOIN` and all the ON conditions
 2. `WHERE`
 3. `GROUP BY`
