@@ -62,4 +62,22 @@ GROUP BY BillingCity
 HAVING sum(Total) > 30
 ```
 
-### 
+### SELECT clause
+
+Now that we are done with discarding rows from the data set and grouping the data, we can select the data we want to be fetched from the query. You can use column names, aggregations etc inside the SELECT clause. Keep in mind that if you're using a reference to an aggregation function, such as COUNT(*) in the SELECT clause, it's merely a reference to an aggregation which already occurred when the grouping took place, so the aggregation itself doesn't happen in the SELECT clause, but this is only a reference to its result set.
+
+### DISTINCT keyword
+The DISTINCT operation takes place after the SELECT. When using the DISTINCT keyword, the database will discard rows with duplicate values from the remaining rows left after the filtering and aggregations took place.
+
+### ORDER BY clause
+Sorting takes place once the database has the entire result set ready (after filtering, grouping, duplication removal). Once we have that, the database can now sort the result set using columns, selected aliases, or aggregation functions, even if they aren't part of the selected data. 
+
+```sql
+SELECT BillingCity, sum(Total) as TotalInvoiceValue, count(distinct InvoiceId) as Invoices
+FROM invoices 
+WHERE BillingCountry= 'USA'
+GROUP BY BillingCity
+HAVING sum(Total) > 30
+ORDER BY count(distinct InvoiceId) DESC
+```
+
