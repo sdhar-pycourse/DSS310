@@ -96,4 +96,7 @@ ORDER BY count(distinct InvoiceId) DESC
 LIMIT 5
 ```
 
+## Advanced Topics
+[Window Functions](https://www.sqlitetutorial.net/sqlite-window-functions/)
+
 
