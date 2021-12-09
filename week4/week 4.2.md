@@ -54,7 +54,7 @@ GROUP BY BillingCity
 
 Now that we have grouped the data using the GROUP BY clause, we can use the HAVING clause to filter out some buckets. The conditions in the HAVING clause can refer to the aggregation functions `count(distinct InvoiceId)`
 As we've already grouped the data, we can no longer access the original rows at this point, so we can only apply conditions to filter entire buckets, and not single rows in a bucket.
-'''sql
+```sql
 SELECT BillingCity, sum(Total) as TotalInvoiceValue, count(distinct InvoiceId) as Invoices
 FROM invoices 
 WHERE BillingCountry= 'USA'
