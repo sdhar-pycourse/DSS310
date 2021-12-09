@@ -14,10 +14,10 @@ HAVING sum(Total) > 30
 LIMIT 5
 ```
 ## Order of Execution
-1. FROM/JOIN and all the ON conditions
-2. WHERE
-3. GROUP BY
-4. HAVING
-5. SELECT (including window functions)
-6. ORDER BY
-7. LIMIT
+1. `FROM/JOIN` and all the ON conditions
+2. `WHERE`
+3. `GROUP BY`
+4. `HAVING`
+5. `SELECT` (including window functions)
+6. `ORDER BY`
+7. `LIMIT`
