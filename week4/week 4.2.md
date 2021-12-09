@@ -15,10 +15,7 @@ LIMIT 5
 ```
 ## Order of Execution
 ![order](https://learnsql.com/blog/sql-order-of-operations/1.png)
-1. `FROM/JOIN` and all the ON conditions
-2. `WHERE`
-3. `GROUP BY`
-4. `HAVING`
-5. `SELECT` (including window functions)
-6. `ORDER BY`
-7. `LIMIT`
+###FROM and JOINs
+The tables specified in the FROM clause (including JOINs), will be evaluated first, to determine the entire working set which is relevant for the query. The database will merge the data from all tables, according to the JOINs ON clauses
+'''sql
+'''
