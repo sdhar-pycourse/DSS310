@@ -1,4 +1,6 @@
 # Data Query Language (DQL)
+
+Please have the chinook.db downloaded and the SQLite DB viewer installed :smile:
 ## SELECT STATEMENT 
 For a business analyst SELECT and it's clauses are most important syntax as this allows access to data and ability to analyze data
 
