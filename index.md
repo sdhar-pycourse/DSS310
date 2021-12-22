@@ -2,7 +2,7 @@
 ![courseimage](https://miro.medium.com/max/2000/1*jTjw5vAPrxvpcLBlIThhgQ.png)
 
 
-<h2>Look here for  course materials and interesting contents!</h2>
+<h2>Look here for instruction material and other interesting content!</h2>
 
 ## Important Links
 <ol>
