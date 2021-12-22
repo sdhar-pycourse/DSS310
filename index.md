@@ -2,7 +2,7 @@
 ![courseimage](https://miro.medium.com/max/2000/1*jTjw5vAPrxvpcLBlIThhgQ.png)
 
 
-Watch out for interesting Content!
+<h2>Watch out for Course Content!</h2>
 
 ## Important Links
 <ol>
