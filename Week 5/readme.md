@@ -1,1 +1,1 @@
-#Class notes for Week 5
+Class notes for Week 5
