@@ -20,7 +20,7 @@ DROP TABLE statement is used to remove a table definition and all associated dat
 ```sql
 DROP TABLE COMPANY;
 ```
-**Please re-run step 1 before proceeding**
+:red_circle: **Please re-run step 1 before proceeding**
 ## INSERT INTO
 SQLite INSERT INTO Statement is used to add new rows of data into a table. 
 You may not need to specify the column(s) name in the SQLite query if you are adding values for all the columns of the table. However, make sure the order of the values is in the same order as the columns in the table.
