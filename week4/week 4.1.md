@@ -21,7 +21,7 @@ DROP TABLE statement is used to remove a table definition and all associated dat
 DROP TABLE COMPANY;
 ```
 :red_circle: **Please re-run step 1 before proceeding**
-## INSERT INTO
+## Step 3: INSERT INTO
 SQLite INSERT INTO Statement is used to add new rows of data into a table. 
 You may not need to specify the column(s) name in the SQLite query if you are adding values for all the columns of the table. However, make sure the order of the values is in the same order as the columns in the table.
 ```sql
@@ -44,7 +44,7 @@ INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (6, 'Kim', 22, 'South-Hall', 45000.00 );
 
 ```
-## SELECT STATEMENT
+## Step 4: SELECT STATEMENT
 This is categorized as a DQL but is required to inspect data in any table. Hence this is being talked about here ahead of time
 SELECT statement is used to fetch the data from a SQLite database table which returns data in the form of a result table. These result tables are also called result sets
 
@@ -57,18 +57,18 @@ If the given condition is satisfied, means true, then it returns the specific va
 The WHERE clause not only is used in SELECT statement, but it is also used in UPDATE, DELETE statement, etc., which will be covered in subsequent chapters.
 Examples:
 
-_Find all the records where AGE is greater than or equal to 25 AND salary is greater than or equal to 65000.00_
+_Step 5: Find all the records where AGE is greater than or equal to 25 AND salary is greater than or equal to 65000.00_
 
 ```sql
 SELECT * FROM COMPANY WHERE AGE >= 25 AND SALARY >= 65000;
 ```
-_Find all the records where AGE is not NULL, which means all the records because none of the record has AGE equal to NULL_
+_Step 6: Find all the records where AGE is not NULL, which means all the records because none of the record has AGE equal to NULL_
 
 ```sql
 SELECT * FROM COMPANY WHERE AGE IS NOT NULL;
 ```
 
-## UPDATE
+## Step 7: UPDATE
 UPDATE Query is used to modify the existing records in a table. You can use WHERE clause with UPDATE query to update selected rows, otherwise all the rows would be updated
 E.g. Update ADDRESS for a customer whose ID is 6
 ```sql
@@ -78,7 +78,7 @@ To modify ALL rows of data with a single value you do not need to use WHERE clau
 ```sql
 UPDATE COMPANY SET ADDRESS = 'Texas', SALARY = 20000.00;
 ```
-## DELETE
+## Step 8: DELETE
 DELETE Query is used to delete the existing records from a table. You can use WHERE clause with DELETE query to delete the selected rows, otherwise all the records would be deleted
  ```sql
  DELETE FROM COMPANY WHERE ID = 7;
@@ -91,11 +91,11 @@ DELETE Query is used to delete the existing records from a table. You can use WH
 ALTER TABLE command modifies an existing table without performing a full dump and reload of the data. You can rename a table using ALTER TABLE statement and additional columns can be added in an existing table using ALTER TABLE statement.
 ALTER TABLE command can be farily advanced; but in SQLite except renaming a table and adding a column in an existing table
 
-Rename Table
+### Step 9: Rename Table
 ```sql
 ALTER TABLE COMPANY RENAME TO OLD_COMPANY;
 ```
-Add a column
+### Step 10: Add a column
 ```sql
 ALTER TABLE OLD_COMPANY ADD COLUMN GENDER char(1);
 ```
