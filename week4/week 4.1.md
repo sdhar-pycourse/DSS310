@@ -5,7 +5,7 @@ CREATE TABLE statement is used to create a new table in any of the given databas
 A unique name for the table needs to follow the CREATE TABLE statement. 
 
 ```sql
-CREATE TABLE COMPANY(
+CREATE TABLE EMPLOYEE(
    ID INT PRIMARY KEY     NOT NULL,
    NAME           TEXT    NOT NULL,
    AGE            INT     NOT NULL,
@@ -25,22 +25,22 @@ DROP TABLE COMPANY;
 SQLite INSERT INTO Statement is used to add new rows of data into a table. 
 You may not need to specify the column(s) name in the SQLite query if you are adding values for all the columns of the table. However, make sure the order of the values is in the same order as the columns in the table.
 ```sql
-INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (1, 'Paul', 32, 'California', 20000.00 );
 
-INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (2, 'Allen', 25, 'Texas', 15000.00 );
 
-INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (3, 'Teddy', 23, 'Norway', 20000.00 );
 
-INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00 );
 
-INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (5, 'David', 27, 'Texas', 85000.00 );
 
-INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (6, 'Kim', 22, 'South-Hall', 45000.00 );
 
 ```
