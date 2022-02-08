@@ -122,3 +122,8 @@ CREATE TABLE CUSTOMER (
 ```
 The phone number has a check constraint. This CHECK constraint ensures that the values in the phone column must be at least 10 characters.
 
+### Step 13: Test CHECK Constraint
+
+| :memo:        |If a table contains a column of type INTEGER PRIMARY KEY, then that column becomes an alias for the ROWID. You can then access the ROWID using any of four different names, the original three names described above or the name given to the INTEGER PRIMARY KEY column. All these names are aliases for one another and work equally well in any context.      |
+|---------------|:------------------------|
+
