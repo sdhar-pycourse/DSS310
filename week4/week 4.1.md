@@ -49,7 +49,7 @@ This is categorized as a DQL but is required to inspect data in any table. Hence
 SELECT statement is used to fetch the data from a SQLite database table which returns data in the form of a result table. These result tables are also called result sets
 
 ```sql
-SELECT * FROM COMPANY;
+SELECT * FROM EMPLOYEE;
 ```
 ### WHERE CLAUSE
 SQLite WHERE clause is used to specify a condition while fetching the data from one table or multiple tables.
@@ -60,32 +60,32 @@ Examples:
 _Step 5: Find all the records where AGE is greater than or equal to 25 AND salary is greater than or equal to 65000.00_
 
 ```sql
-SELECT * FROM COMPANY WHERE AGE >= 25 AND SALARY >= 65000;
+SELECT * FROM EMPLOYEE WHERE AGE >= 25 AND SALARY >= 65000;
 ```
 _Step 6: Find all the records where AGE is not NULL, which means all the records because none of the record has AGE equal to NULL_
 
 ```sql
-SELECT * FROM COMPANY WHERE AGE IS NOT NULL;
+SELECT * FROM EMPLOYEE WHERE AGE IS NOT NULL;
 ```
 
 ## Step 7: UPDATE
 UPDATE Query is used to modify the existing records in a table. You can use WHERE clause with UPDATE query to update selected rows, otherwise all the rows would be updated
 E.g. Update ADDRESS for a customer whose ID is 6
 ```sql
-UPDATE COMPANY SET ADDRESS = 'Texas' WHERE ID = 6;
+UPDATE EMPLOYEE SET ADDRESS = 'Texas' WHERE ID = 6;
 ```
 To modify ALL rows of data with a single value you do not need to use WHERE clause and UPDATE query. E.g. ADDRESS and SALARY column values in COMPANY table,
 ```sql
-UPDATE COMPANY SET ADDRESS = 'Texas', SALARY = 20000.00;
+UPDATE EMPLOYEE SET ADDRESS = 'Texas', SALARY = 20000.00;
 ```
 ## Step 8: DELETE
 DELETE Query is used to delete the existing records from a table. You can use WHERE clause with DELETE query to delete the selected rows, otherwise all the records would be deleted
  ```sql
- DELETE FROM COMPANY WHERE ID = 7;
+ DELETE FROM EMPLOYEE WHERE ID = 7;
  ```
  DELETING without a WHERE statement deletes the content of the table
  ```sql
- DELETE FROM COMPANY;
+ DELETE FROM EMPLOYEE;
  ```
  ## ALTER
 ALTER TABLE command modifies an existing table without performing a full dump and reload of the data. You can rename a table using ALTER TABLE statement and additional columns can be added in an existing table using ALTER TABLE statement.
@@ -93,11 +93,11 @@ ALTER TABLE command can be farily advanced; but in SQLite except renaming a tabl
 
 ### Step 9: Rename Table
 ```sql
-ALTER TABLE COMPANY RENAME TO OLD_COMPANY;
+ALTER TABLE EMPLOYEE RENAME TO OLD_EMPLOYEE;
 ```
 ### Step 10: Add a column
 ```sql
-ALTER TABLE OLD_COMPANY ADD COLUMN GENDER char(1);
+ALTER TABLE OLD_EMPLOYEE ADD COLUMN GENDER char(1);
 ```
 
 ## CONSTRAINTS
