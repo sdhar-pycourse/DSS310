@@ -18,7 +18,7 @@ DROP TABLE statement is used to remove a table definition and all associated dat
 
 **You must be careful while using this command because once a table is deleted then all the information available in the table would also be lost forever.**
 ```sql
-DROP TABLE COMPANY;
+DROP TABLE EMPLOYEE;
 ```
 :red_circle: **Please re-run step 1 before proceeding**
 ## Step 3: INSERT INTO
