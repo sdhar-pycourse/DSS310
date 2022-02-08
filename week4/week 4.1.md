@@ -143,3 +143,21 @@ VALUES('Jane','Smith','(408)-987-123');
 | :memo:        |If a table contains a column of type INTEGER PRIMARY KEY, then that column becomes an alias for the ROWID. You can then access the ROWID using any of four different names, the original three names described above or the name given to the INTEGER PRIMARY KEY column. All these names are aliases for one another and work equally well in any context.      |
 |---------------|:------------------------|
 
+## Primary Key and Foreign Key Constraints
+
+```sql
+create table CustomerInteraction(
+   EmployeeID integer not null REFERENCES EMPLOYEE(ID),
+   CustomerID  integer not null REFERENCES CUSTOMER(customerID),
+	InteractionDate datetime not NULL,
+	primary key (EmployeeID, CustomerID, InteractionDate)
+)
+```
+
+| :point_up:    | Does this look familair? Where did we see this before? Watch out for the syntax for Primary Key and Foreign Key|
+|---------------|:------------------------|
+
+
+INSERT INTO CustomerInteraction(EmployeeID, CustomerID, InteractionDate)
+VALUES(2,2,'2017-08-30 18:47');
+
