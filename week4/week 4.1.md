@@ -5,7 +5,7 @@ CREATE TABLE statement is used to create a new table in any of the given databas
 A unique name for the table needs to follow the CREATE TABLE statement. 
 
 ```sql
-CREATE TABLE EMPLOYEE(
+CREATE TABLE COMPANY(
    ID INT PRIMARY KEY     NOT NULL,
    NAME           TEXT    NOT NULL,
    AGE            INT     NOT NULL,
@@ -18,29 +18,29 @@ DROP TABLE statement is used to remove a table definition and all associated dat
 
 **You must be careful while using this command because once a table is deleted then all the information available in the table would also be lost forever.**
 ```sql
-DROP TABLE EMPLOYEE;
+DROP TABLE COMPANY;
 ```
 :red_circle: **Please re-run step 1 before proceeding**
 ## Step 3: INSERT INTO
 SQLite INSERT INTO Statement is used to add new rows of data into a table. 
 You may not need to specify the column(s) name in the SQLite query if you are adding values for all the columns of the table. However, make sure the order of the values is in the same order as the columns in the table.
 ```sql
-INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (1, 'Paul', 32, 'California', 20000.00 );
 
-INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (2, 'Allen', 25, 'Texas', 15000.00 );
 
-INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (3, 'Teddy', 23, 'Norway', 20000.00 );
 
-INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00 );
 
-INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (5, 'David', 27, 'Texas', 85000.00 );
 
-INSERT INTO EMPLOYEE (ID,NAME,AGE,ADDRESS,SALARY)
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY)
 VALUES (6, 'Kim', 22, 'South-Hall', 45000.00 );
 
 ```
@@ -49,7 +49,7 @@ This is categorized as a DQL but is required to inspect data in any table. Hence
 SELECT statement is used to fetch the data from a SQLite database table which returns data in the form of a result table. These result tables are also called result sets
 
 ```sql
-SELECT * FROM EMPLOYEE;
+SELECT * FROM COMPANY;
 ```
 ### WHERE CLAUSE
 SQLite WHERE clause is used to specify a condition while fetching the data from one table or multiple tables.
@@ -60,23 +60,22 @@ Examples:
 _Step 5: Find all the records where AGE is greater than or equal to 25 AND salary is greater than or equal to 65000.00_
 
 ```sql
-SELECT * FROM EMPLOYEE WHERE AGE >= 25 AND SALARY >= 65000;
+SELECT * FROM COMPANY WHERE AGE >= 25 AND SALARY >= 65000;
 ```
 _Step 6: Find all the records where AGE is not NULL, which means all the records because none of the record has AGE equal to NULL_
 
 ```sql
-SELECT * FROM EMPLOYEE WHERE AGE IS NOT NULL;
+SELECT * FROM COMPANY WHERE AGE IS NOT NULL;
 ```
-
 ## Step 7: UPDATE
 UPDATE Query is used to modify the existing records in a table. You can use WHERE clause with UPDATE query to update selected rows, otherwise all the rows would be updated
 E.g. Update ADDRESS for a customer whose ID is 6
 ```sql
-UPDATE EMPLOYEE SET ADDRESS = 'Texas' WHERE ID = 6;
+UPDATE COMPANY SET ADDRESS = 'Texas' WHERE ID = 6;
 ```
 To modify ALL rows of data with a single value you do not need to use WHERE clause and UPDATE query. E.g. ADDRESS and SALARY column values in COMPANY table,
 ```sql
-UPDATE EMPLOYEE SET ADDRESS = 'Texas', SALARY = 20000.00;
+UPDATE COMPANY SET ADDRESS = 'Texas', SALARY = 20000.00;
 ```
 ## Step 8: 
 After executing the statement, the transaction is open until it is explicitly committed or rolled back e.g.  SQL statements to select or update data in the database. Note that the change is only visible to the current session (or client).
@@ -87,11 +86,11 @@ COMMIT;
 ## Step 9: DELETE
 DELETE Query is used to delete the existing records from a table. You can use WHERE clause with DELETE query to delete the selected rows, otherwise all the records would be deleted
  ```sql
- DELETE FROM EMPLOYEE WHERE ID = 7;
+ DELETE FROM COMPANY WHERE ID = 7;
  ```
  DELETING without a WHERE statement deletes the content of the table
  ```sql
- DELETE FROM EMPLOYEE;
+ DELETE FROM COMPANY;
  ```
  ## ALTER
 ALTER TABLE command modifies an existing table without performing a full dump and reload of the data. You can rename a table using ALTER TABLE statement and additional columns can be added in an existing table using ALTER TABLE statement.
@@ -99,11 +98,11 @@ ALTER TABLE command can be farily advanced; but in SQLite except renaming a tabl
 
 ### Step 10: Rename Table
 ```sql
-ALTER TABLE EMPLOYEE RENAME TO OLD_EMPLOYEE;
+ALTER TABLE COMPANY RENAME TO EMPLOYEE;
 ```
 ### Step 11: Add a column
 ```sql
-ALTER TABLE OLD_EMPLOYEE ADD COLUMN GENDER char(1);
+ALTER TABLE EMPLOYEE ADD COLUMN GENDER char(1);
 ```
 
 ## CONSTRAINTS
