@@ -157,7 +157,21 @@ create table CustomerInteraction(
 | :point_up:    | Does this look familair? Where did we see this before? Watch out for the syntax for Primary Key and Foreign Key|
 |---------------|:------------------------|
 
+Insert the following rows of data
+```sql
+INSERT INTO CustomerInteraction(EmployeeID, CustomerID, InteractionDate)
+VALUES(1,1,'2016-08-30 18:47');
 
 INSERT INTO CustomerInteraction(EmployeeID, CustomerID, InteractionDate)
 VALUES(2,2,'2017-08-30 18:47');
+
+INSERT INTO CustomerInteraction(EmployeeID, CustomerID, InteractionDate)
+VALUES(5,2,'2019-08-30 18:47');
+
+INSERT INTO CustomerInteraction(EmployeeID, CustomerID, InteractionDate)
+VALUES(2,4,'2017-08-30 18:47');
+```
+| :question: | Did everything execute correctly? WWhat happned and why?|
+|---------------|:------------------------|
+
 
