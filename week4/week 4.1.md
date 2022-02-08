@@ -147,10 +147,10 @@ VALUES('Jane','Smith','(408)-987-123');
 
 ```sql
 create table CustomerInteraction(
-   EmployeeID integer not null REFERENCES EMPLOYEE(ID),
-   CustomerID  integer not null REFERENCES CUSTOMER(customerID),
-	InteractionDate datetime not NULL,
-	primary key (EmployeeID, CustomerID, InteractionDate)
+  EmployeeID integer not null REFERENCES EMPLOYEE(ID),
+  CustomerID  integer not null REFERENCES CUSTOMER(customerID),
+  InteractionDate datetime not NULL,
+  primary key (EmployeeID, CustomerID, InteractionDate)
 )
 ```
 
