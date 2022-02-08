@@ -107,5 +107,18 @@ ALTER TABLE EMPLOYEE ADD COLUMN GENDER char(1);
 ```
 
 ## CONSTRAINTS
+SQLite CHECK constraints allow you to define expressions to test values whenever they are inserted into or updated within a column. If the values do not meet the criteria defined by the expression, SQLite will issue a constraint violation and abort the statement. The CHECK constraints allow you to define additional data integrity checks beyond UNIQUE or NOT NULL to suit your specific application. SQLite allows you to define a CHECK constraint at the column level or the table level.
 
+### Step 12: Column level check constraint example
+```sql
+CREATE TABLE CUSTOMER (
+    customerID INTEGER PRIMARY KEY,
+    first_name TEXT    NOT NULL,
+    last_name  TEXT    NOT NULL,
+    email      TEXT,
+    phone      TEXT    NOT NULL
+                    CHECK (length(phone) >= 10) 
+);
+```
+The phone number has a check constraint. This CHECK constraint ensures that the values in the phone column must be at least 10 characters.
 
