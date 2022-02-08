@@ -132,16 +132,13 @@ VALUES('John','Doe','408123456');
 
 Now try...
 
-'''sql
+```sql
 INSERT INTO CUSTOMER(first_name, last_name, phone)
 VALUES('John','Doe','(408)-123-456');
 
 INSERT INTO CUSTOMER(first_name, last_name, phone)
 VALUES('John','Doe','(408)-987-123');
-'''
-
-
-
+```
 
 | :memo:        |If a table contains a column of type INTEGER PRIMARY KEY, then that column becomes an alias for the ROWID. You can then access the ROWID using any of four different names, the original three names described above or the name given to the INTEGER PRIMARY KEY column. All these names are aliases for one another and work equally well in any context.      |
 |---------------|:------------------------|
