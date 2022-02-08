@@ -92,6 +92,7 @@ DELETE Query is used to delete the existing records from a table. You can use WH
  ```sql
  DELETE FROM COMPANY;
  ```
+ :red_circle: **Repeat step 1 and then 3-8**
  ## ALTER
 ALTER TABLE command modifies an existing table without performing a full dump and reload of the data. You can rename a table using ALTER TABLE statement and additional columns can be added in an existing table using ALTER TABLE statement.
 ALTER TABLE command can be farily advanced; but in SQLite except renaming a table and adding a column in an existing table
