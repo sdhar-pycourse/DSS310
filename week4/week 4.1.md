@@ -78,7 +78,13 @@ To modify ALL rows of data with a single value you do not need to use WHERE clau
 ```sql
 UPDATE EMPLOYEE SET ADDRESS = 'Texas', SALARY = 20000.00;
 ```
-## Step 8: DELETE
+## Step 8: 
+After executing the statement, the transaction is open until it is explicitly committed or rolled back e.g.  SQL statements to select or update data in the database. Note that the change is only visible to the current session (or client).
+To make the changes permanent to the database use COMMIT 
+```sql
+COMMIT;
+```
+## Step 9: DELETE
 DELETE Query is used to delete the existing records from a table. You can use WHERE clause with DELETE query to delete the selected rows, otherwise all the records would be deleted
  ```sql
  DELETE FROM EMPLOYEE WHERE ID = 7;
@@ -91,11 +97,11 @@ DELETE Query is used to delete the existing records from a table. You can use WH
 ALTER TABLE command modifies an existing table without performing a full dump and reload of the data. You can rename a table using ALTER TABLE statement and additional columns can be added in an existing table using ALTER TABLE statement.
 ALTER TABLE command can be farily advanced; but in SQLite except renaming a table and adding a column in an existing table
 
-### Step 9: Rename Table
+### Step 10: Rename Table
 ```sql
 ALTER TABLE EMPLOYEE RENAME TO OLD_EMPLOYEE;
 ```
-### Step 10: Add a column
+### Step 11: Add a column
 ```sql
 ALTER TABLE OLD_EMPLOYEE ADD COLUMN GENDER char(1);
 ```
