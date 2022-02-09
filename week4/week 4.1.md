@@ -171,7 +171,7 @@ VALUES(5,2,'2019-08-30 18:47');
 INSERT INTO CustomerInteraction(EmployeeID, CustomerID, InteractionDate)
 VALUES(2,4,'2017-08-30 18:47');
 ```
-| :question: | Did everything execute correctly? What happned and why?|
+| :question: | Did everything execute correctly? What happened and why?|
 |---------------|:------------------------|
 
 
