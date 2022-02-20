@@ -126,7 +126,8 @@ The following table shows the complete list of valid markers for constructing fo
 
 |Format|	Description|
 |------|---------------|
-%d	day of the month: 01-31
+|%d	|day of the month: 01-31|
+|------|---------------|
 %f	fractional seconds: SS.SSS
 %H	hour: 00-24
 %j	day of the year: 001-366
