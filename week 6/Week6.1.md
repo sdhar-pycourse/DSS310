@@ -91,5 +91,8 @@ ORDER BY
 count(al.AlbumId) ASC
 LIMIT 20
 ```
+The above query should return 20 rows of artists with 0 albums to their credit. Often these are called botom performers
+
+
 
 
