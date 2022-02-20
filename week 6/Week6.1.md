@@ -32,7 +32,22 @@ To query data from both artists and albums tables, you use can use an INNER JOIN
 | :memo:        | As indicated earlier SQLite doesn’t directly support the RIGHT JOIN and FULL OUTER JOIN|
 |---------------|:------------------------|
 
-## I
+## Inner Join
+INNER JOIN clause matches each row from the albums table with every row from the artists table based on the join condition (artists.ArtistId = albums.ArtistId) specified after the ON keyword. If the join condition evaluates to true (or 1), the columns of rows from both albums and artists tables are included in the result set.
 
 *Who are the top 5 artists with the highest number of tracks to their credit?*
+
+```sql
+SELECT 
+	Name,
+    count(Title)
+
+FROM 
+    albums
+INNER JOIN artists 
+    ON artists.ArtistId = albums.ArtistId
+GROUP BY Name
+ORDER BY count(Title) DESC
+LIMIT 5
+```
 
