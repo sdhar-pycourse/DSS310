@@ -1,5 +1,5 @@
 # JOINS & Other Interesting SQL Topics
-# Today's Topics
+# Table of Contents
 1. [Chinook db schema](#Chinook.db schema)
 
 # Chinook.db schema
