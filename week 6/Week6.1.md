@@ -111,7 +111,7 @@ Often you may need to extract specific parts of a date string and perform aggreg
 
 *What are the number of in invoices and billed $ for USA every month and year?*
 
-## strftime() fucntion
+## strftime() function
 
 ```sql
 SELECT strftime('%Y-%m',InvoiceDate), count(InvoiceId), sum(Total)
