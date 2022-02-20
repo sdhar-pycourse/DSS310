@@ -54,7 +54,7 @@ LIMIT 5
 
 Let's try a new question:
 
-*What are the 10 artists with the least number of albums?"
+*What are the 10 artists with the least number of albums?*
 
 ```
 SELECT
