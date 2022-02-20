@@ -130,14 +130,14 @@ The following table shows the complete list of valid markers for constructing fo
 |%f	|fractional seconds: SS.SSS|
 |%H	|hour: 00-24|
 |%j	|day of the year: 001-366|
-%J	Julian day number
-%m	month: 01-12
-%M	minute: 00-59
-%s	seconds since 1970-01-01
-%S	seconds: 00-59
-%w	day of week 0-6 with Sunday==0
-%W	week of the year: 00-53
-%Y	year: 0000-9999
+|%J	|Julian day number|
+|%m	|month: 01-12|
+|%M	|minute: 00-59|
+|%s	|seconds since 1970-01-01|
+|%S	|seconds: 00-59|
+|%w	|day of week 0-6 with Sunday==0|
+|%W	|week of the year: 00-53
+|%Y	|year: 0000-9999
 
 
 
