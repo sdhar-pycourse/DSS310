@@ -120,6 +120,24 @@ where BillingCountry= 'USA'
 group by strftime('%Y-%m',InvoiceDate)
 ```
 
+The strftime() function is used to format a datetime value based on a specified format. The format_string specifies the format for the datetime value specified by the time_string value.
+
+The following table shows the complete list of valid markers for constructing format:
+
+Format	Description
+%d	day of the month: 01-31
+%f	fractional seconds: SS.SSS
+%H	hour: 00-24
+%j	day of the year: 001-366
+%J	Julian day number
+%m	month: 01-12
+%M	minute: 00-59
+%s	seconds since 1970-01-01
+%S	seconds: 00-59
+%w	day of week 0-6 with Sunday==0
+%W	week of the year: 00-53
+%Y	year: 0000-9999
+
 
 
 
