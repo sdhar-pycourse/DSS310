@@ -47,4 +47,5 @@ GROUP BY Name
 ORDER BY count(Title) DESC
 LIMIT 5
 ```
-
+| :bulb:        | Observe that Name of artist and Title are not available on the same table|
+|---------------|:------------------------|
