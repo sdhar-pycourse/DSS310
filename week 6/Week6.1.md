@@ -124,7 +124,8 @@ The strftime() function is used to format a datetime value based on a specified 
 
 The following table shows the complete list of valid markers for constructing format:
 
-Format	Description
+|Format|	Description|
+|------|---------------|
 %d	day of the month: 01-31
 %f	fractional seconds: SS.SSS
 %H	hour: 00-24
