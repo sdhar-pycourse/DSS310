@@ -76,4 +76,20 @@ Let's try to understand the situation better with the following diagram:
 - 2 : Are the artists who have no albums! (left yellow portion)
 - 5: Wuld be albums with no artists. (right white portion) But in our case there ae no albums without a artist, therefore this is a 0 set
 
+Therefore in oyr case our query needs to get us the album count across 13+2.
+- INNER JOIN: Only retrieve result set for 13
+- LEFT OUTER JOIN: Retrieves result set for (13+2) 
+- RIGHT OUTER JOIN: Retrieves result set for (5+13)
+- FULL OUTER JOIN: Retrieves result set for (5+2+13)
+
+```sql
+SELECT a.name, count (al.AlbumId) as AlbumCount
+FROM artists a
+LEFT JOIN albums al ON al.ArtistId = a.ArtistId
+GROUP BY a.name
+ORDER BY
+count(al.AlbumId) ASC
+LIMIT 20
+```
+
 
