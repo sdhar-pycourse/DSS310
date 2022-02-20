@@ -68,4 +68,8 @@ LIMIT 20
 | :warning:        | The last SQL statement is syntax wise correct. But is it semantically consistent? Remember a artist may or maynot have a album |
 |---------------|:------------------------|
 
+Let's try to understand the situation better with the following diagram:
+
+![outer](https://www.sqlitetutorial.net/wp-content/uploads/2015/12/SQLite-Left-Join-Venn-Diagram.png)
+
 
