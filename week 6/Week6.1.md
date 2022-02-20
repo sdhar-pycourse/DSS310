@@ -61,8 +61,7 @@ SELECT a.name, count (al.AlbumId) as AlbumCount
 FROM artists a
 INNER JOIN albums al ON al.ArtistId = a.ArtistId
 GROUP BY a.name
-ORDER BY
-count(al.AlbumId) ASC
+ORDER BY count(al.AlbumId) ASC
 LIMIT 20
 ```
 
