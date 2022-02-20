@@ -38,10 +38,7 @@ INNER JOIN clause matches each row from the albums table with every row from the
 *Who are the top 5 artists with the highest number of tracks to their credit?*
 
 ```sql
-SELECT 
-	Name,
-    count(Title)
-
+SELECT Name, count(Title) as TitleNum
 FROM 
     albums
 INNER JOIN artists 
