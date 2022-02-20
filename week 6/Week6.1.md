@@ -65,7 +65,7 @@ ORDER BY count(al.AlbumId) ASC
 LIMIT 20
 ```
 
-| :warning:        | The last SQL statement is syntax wise correct. But is it semantically consistent? |
+| :warning:        | The last SQL statement is syntax wise correct. But is it semantically consistent? Remember a artist may or maynot have a album |
 |---------------|:------------------------|
 
 
