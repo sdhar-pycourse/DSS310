@@ -56,7 +56,7 @@ Let's try a new question:
 
 *What are the 10 artists with the least number of albums?*
 
-```
+```sql
 SELECT a.name, count (al.AlbumId) as AlbumCount
 FROM artists a
 INNER JOIN albums al ON al.ArtistId = a.ArtistId
