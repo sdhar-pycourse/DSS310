@@ -57,14 +57,10 @@ Let's try a new question:
 *What are the 10 artists with the least number of albums?*
 
 ```
-SELECT
-   a.name, 
-   count (al.AlbumId) as AlbumCount
-FROM
-   artists a
-INNER JOIN albums al ON
-   al.ArtistId = a.ArtistId
-   GROUP BY a.name
+SELECT a.name, count (al.AlbumId) as AlbumCount
+FROM artists a
+INNER JOIN albums al ON al.ArtistId = a.ArtistId
+GROUP BY a.name
 ORDER BY
 count(al.AlbumId) ASC
 LIMIT 20
