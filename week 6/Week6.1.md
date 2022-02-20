@@ -18,5 +18,8 @@ Before we sart the class let's take a look at the Chinook.db data model to grab 
     - Optionality: Specifies how entity inatance on one side must be joined to an entity on the other side (N=0 or 1)
 7. SQL JOINS help us to fetch information across entity tables following the defined business rules
 8. GROUP BY clauses are used to **aggregate** information from higher cardinality tables to lower cardinality tables
-9. **GRanularity** is a measure of the level of detail in a data structure. 
+9. **Granularity** is a measure of the level of detail in a data structure. 
+    - InvoiceLine is at the granularity of a Invoice, track and date
+
+| :memo:        | In the following sections we shall use a question asnwer type format to ask a business question and answer it with a SQL using the chinook.db practise database|
 
