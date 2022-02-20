@@ -127,10 +127,9 @@ The following table shows the complete list of valid markers for constructing fo
 |Format|	Description|
 |------|---------------|
 |%d	|day of the month: 01-31|
-|------|---------------|
-%f	fractional seconds: SS.SSS
-%H	hour: 00-24
-%j	day of the year: 001-366
+|%f	|fractional seconds: SS.SSS|
+|%H	|hour: 00-24|
+|%j	|day of the year: 001-366|
 %J	Julian day number
 %m	month: 01-12
 %M	minute: 00-59
