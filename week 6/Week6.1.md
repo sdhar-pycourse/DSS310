@@ -111,9 +111,14 @@ Often you may need to extract specific parts of a date string and perform aggreg
 
 *What are the number of in invoices and billed $ for USA every month and year?*
 
-##strftime() fucntion
+## strftime() fucntion
 
 ```sql
+SELECT strftime('%Y-%m',InvoiceDate), count(InvoiceId), sum(Total)
+from invoices
+where BillingCountry= 'USA'
+group by strftime('%Y-%m',InvoiceDate)
+```
 
 
 
