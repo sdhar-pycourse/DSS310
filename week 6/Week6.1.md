@@ -49,3 +49,25 @@ LIMIT 5
 ```
 | :bulb:        | Observe that Name of artist and Title are not available on the same table|
 |---------------|:------------------------|
+
+## LEFT OUTER join
+
+Let's try a new question:
+
+*What are the 10 artists with the least number of albums?"
+
+```
+SELECT
+   a.name, 
+   count (al.AlbumId) as AlbumCount
+FROM
+   artists a
+INNER JOIN albums al ON
+   al.ArtistId = a.ArtistId
+   GROUP BY a.name
+ORDER BY
+count(al.AlbumId) ASC
+LIMIT 20
+```
+
+
