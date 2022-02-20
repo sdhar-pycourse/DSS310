@@ -72,4 +72,8 @@ Let's try to understand the situation better with the following diagram:
 
 ![outer](https://www.sqlitetutorial.net/wp-content/uploads/2015/12/SQLite-Left-Join-Venn-Diagram.png)
 
+13: Are the artists who have a album
+2 : Are the artists who have no albums!
+5: 
+
 
