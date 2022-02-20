@@ -13,8 +13,10 @@ Before we sart the class let's take a look at the Chinook.db data model to grab 
 3. Attributes/ Columns hold information that decribe each specific entity
 4. Entitie are identified via **primary keys** and related via **foreign keys**
 5. Each foreign key relationship is a **word sentence** of a model that SQL queries must conform to
-6. Foreign Key relationships enforce busness rules:
-    - Cardinality:
-    - Optionality:
-7. 
+6. Foreign Key relationships enforce business rules:
+    - Cardinality: Determines the number of entity instances on one side of the relationship that can be joined to a single entity on the other side( N to 0,1,M)
+    - Optionality: Specifies how entity inatance on one side must be joined to an entity on the other side (N=0 or 1)
+7. SQL JOINS help us to fetch information across entity tables following the defined business rules
+8. GROUP BY clauses are used to **aggregate** information from higher cardinality tables to lower cardinality tables
+9. **GRanularity** is a measure of the level of detail in a data structure. 
 
