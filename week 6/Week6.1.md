@@ -107,13 +107,19 @@ where InvoiceDate between '2010-01-01' and '2010-03-31'
 
 ## DATE function
 
+The date() function accepts a time string and zero or more modifiers as arguments. It returns a date string in this format: YYYY-MM-DD.
 
+```sql
+SELECT 
+    DATE('now',
+        'start of month',
+        '+1 month',
+        '-1 day')
+```
+## strftime() function
 
 Often you may need to extract specific parts of a date string and perform aggregation exercise. Example:-
-
 *What are the number of in invoices and billed $ for USA every month and year?*
-
-## strftime() function
 
 ```sql
 SELECT strftime('%Y-%m',InvoiceDate), count(InvoiceId), sum(Total)
