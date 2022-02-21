@@ -105,6 +105,8 @@ where InvoiceDate between '2010-01-01' and '2010-03-31'
 | :memo:        | In this course the date and time functions use a subset of IS0-8601 date and time formats. The date() function returns the date in this format: YYYY-MM-DD. The time() function returns the time as HH:MM:SS. The datetime() function returns "YYYY-MM-DD HH:MM:SS".|
 |---------------|:------------------------|
 
+## DATE function
+
 
 
 Often you may need to extract specific parts of a date string and perform aggregation exercise. Example:-
