@@ -116,6 +116,12 @@ SELECT
         '+1 month',
         '-1 day')
 ```
+
+The function works as follows:
+- First, start of month is applied to the current date specified by the now time string so the result is the first day of the current month.
+- Second, +1 month is applied to the first day of the current month that results on the first day of next month.
+- Third, -1 day is applied to the first day of the next month which results in the last day of the previous month.
+
 ## strftime() function
 
 Often you may need to extract specific parts of a date string and perform aggregation exercise. Example:-
@@ -146,9 +152,3 @@ The following table shows the complete list of valid markers for constructing fo
 |%w	|day of week 0-6 with Sunday==0|
 |%W	|week of the year: 00-53
 |%Y	|year: 0000-9999
-
-
-
-
-
-
