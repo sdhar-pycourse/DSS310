@@ -96,6 +96,16 @@ count(al.AlbumId) ASC
 LIMIT 20
 ```
 The above query should return 20 rows of artists with 0 albums to their credit. Often these are called bottom performers
+# WHERE Clause 
+
+## Subquery
+## EXISTS
+## IS NULL
+
+# Aggregate Functions
+# String Functions
+# Window Functions
+
 
 # DATE Manipulation
 Often you may be asked to manipulate date ranges in SQL. Example:-
