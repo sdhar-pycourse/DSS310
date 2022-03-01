@@ -1,6 +1,5 @@
 # JOINS & Other Interesting DQL Topics
 
-
 # Chinook.db schema
 Before we sart the class let's take a look at the Chinook.db data model to grab a high level view of what the database looks like:
 
@@ -23,6 +22,11 @@ Before we sart the class let's take a look at the Chinook.db data model to grab 
 
 | :memo:        | In the following sections we shall use a question asnwer type format to ask a business question and answer it with a SQL using the chinook.db practise database|
 |---------------|:------------------------|
+
+# Set Operations
+## UNON
+## INTERSECT
+## EXCEPT
 
 # JOINS
 There are various kinds of SQLite joins to query data from two or more tables. An artist can have zero or many albums while an album belongs to one artist.
