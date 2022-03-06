@@ -382,18 +382,16 @@ ORDER BY
 
 # String Functions
 
-|Name|	Description|
-|----|-------------|
-|SUBSTR |Extract and returns a substring with a predefined length starting at a specified position in a source string|
-|TRIM	|Return a copy of a string that has specified characters removed from the beginning and the end of a string.|
-|LTRIM	|Return a copy of a string that has specified characters removed from the beginning of a string.|
-|RTRIM	|Return a copy of a string that has specified characters removed from the end of a string.|
-|LENGTH	|Return the number of characters in a string or the number of bytes in a BLOB.|
-|REPLACE	|Return a copy of a string with each instance of a substring replaced by another substring.|
-|UPPER	|Return a copy of a string with all of the characters converted to uppercase.|
-|LOWER	|Return a copy of a string with all of the characters converted to lowercase.|
-|INSTR	|Find a substring in a string and returns an integer indicating the position of the first occurrence of the substring.|
-| '||' Concatenation Operator 	|Concatenate two strings into a single string.|
+|SUBSTR |Extract and returns a substring with a predefined length starting at a specified position in a source string
+|TRIM	|Return a copy of a string that has specified characters removed from the beginning and the end of a string.
+|LTRIM	|Return a copy of a string that has specified characters removed from the beginning of a string.
+|RTRIM	|Return a copy of a string that has specified characters removed from the end of a string.
+|LENGTH	|Return the number of characters in a string or the number of bytes in a BLOB.
+|REPLACE	|Return a copy of a string with each instance of a substring replaced by another substring.
+|UPPER	|Return a copy of a string with all of the characters converted to uppercase.
+|LOWER	|Return a copy of a string with all of the characters converted to lowercase.
+|INSTR	|Find a substring in a string and returns an integer indicating the position of the first occurrence of the substring.
+| '||' Concatenation Operator 	|Concatenate two strings into a single string.
 
 # DATE Manipulation
 Often you may be asked to manipulate date ranges in SQL. Example:-
