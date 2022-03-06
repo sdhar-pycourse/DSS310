@@ -25,6 +25,41 @@ Before we sart the class let's take a look at the Chinook.db data model to grab 
 
 # Set Operations
 ## UNON
+Sometimes, you need to combine data from multiple tables into a complete result set. It may be for tables with similar data within the same database or maybe you need to combine similar data from multiple databases. To combine rows from two or more queries into a single result set, you use SQLite UNION operator.
+
+Both UNION and UNION ALL operators combine rows from result sets into a single result set. The UNION operator removes eliminate duplicate rows, whereas the UNION ALL operator does not.
+
+Because the UNION ALL operator does not remove duplicate rows, it runs faster than the UNION operator.
+The following are rules to union data:
+
+- The number of columns in all queries must be the same.
+- The corresponding columns must have compatible data types.
+- The column names of the first query determine the column names of the combined result set.
+- The GROUP BY and HAVING clauses are applied to each individual query, not the final result set.
+- The ORDER BY clause is applied to the combined result set, not within the individual result set.
+
+**Note that the difference between UNION and JOIN e.g., INNER JOIN or LEFT JOIN is that the JOIN clause combines columns from multiple related tables, while UNION combines rows from multiple similar tables.**
+
+*Who are all the people in the chinook.db database?*
+
+```sql
+SELECT FirstName, LastName, 'Employee' AS Type
+FROM employees
+UNION
+SELECT FirstName, LastName, 'Customer'
+FROM customers;
+```
+*Who are all the people in the chinook.db database, sorted by last name?*
+
+```sql
+SELECT FirstName, LastName, 'Employee' AS Type
+FROM employees
+UNION
+SELECT FirstName, LastName, 'Customer'
+FROM customers
+ORDER BY LastName;
+```
+
 ## INTERSECT
 ## EXCEPT
 
