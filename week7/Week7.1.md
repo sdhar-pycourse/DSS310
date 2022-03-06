@@ -205,8 +205,26 @@ The following table illustrates the SQLite logical operators:
 
 *Use the tracks table and provide tracknames that are from album id 4 with length of more than 215000 milliseconds and less than 12000000 bytes*
 
-
 ### IS NULL
+NULL is special. It indicates that a piece of information is unknown or not applicable. For example, some songs may not have the songwriter information because we don’t know who wrote them. To store these unknown songwriters along with the songs in a database table, we must use NULL. NULL is not equal to anything even the number zero, an empty string, and so on. Especially, NULL is not equal to itself.
+
+*Find all racks with no composers*
+
+```sql
+SELECT
+    Name, 
+    Composer
+FROM
+    tracks
+WHERE
+    Composer IS NULL
+ORDER BY 
+    Name; 
+```
+:Warning: '= NULL' is incorrect syntax. I is always going to be IS NULL
+
+As a corollary there is also a IS NOT NULL syntax. You may want to write the converse of the above statement
+
 # Aggregate Functions
 
 # Subquery
