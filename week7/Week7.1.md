@@ -268,6 +268,7 @@ FROM
 			albumid
 	) AS album;
 ```
+:warning: Skipping correlated subquery as it is a slightly advanced topic
 
 
 
