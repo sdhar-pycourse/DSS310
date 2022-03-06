@@ -38,7 +38,7 @@ The following are rules to union data:
 - The GROUP BY and HAVING clauses are applied to each individual query, not the final result set.
 - The ORDER BY clause is applied to the combined result set, not within the individual result set.
 
-**Note that the difference between UNION and JOIN e.g., INNER JOIN or LEFT JOIN is that the JOIN clause combines columns from multiple related tables, while UNION combines rows from multiple similar tables.**
+<span style="color:blue"> **Note that the difference between UNION and JOIN e.g., INNER JOIN or LEFT JOIN is that the JOIN clause combines columns from multiple related tables, while UNION combines rows from multiple similar tables.** text</span>
 
 *Who are all the people in the chinook.db database?*
 
