@@ -78,6 +78,20 @@ ORDER BY CustomerId;
 |---------------|:------------------------|
 
 ## EXCEPT
+SQLite EXCEPT operator compares the result sets of two queries and returns distinct rows from the left query that are not output by the right query.
+This query must conform to the following rules:
+- First, the number of columns in the select lists of both queries must be the same.
+- Second, the order of the columns and their types must be comparable.
+
+*What are the artistID that don't have a album to their credit?*
+```sql
+SELECT ArtistId
+FROM artists
+EXCEPT
+SELECT ArtistId
+FROM albums;
+```
+
 
 # JOINS
 There are various kinds of SQLite joins to query data from two or more tables. An artist can have zero or many albums while an album belongs to one artist.
