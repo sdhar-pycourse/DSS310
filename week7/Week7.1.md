@@ -203,6 +203,10 @@ The following table illustrates the SQLite logical operators:
 |NOT	|reverses the value of other operators such as NOT EXISTS, NOT IN, NOT BETWEEN, etc.
 |OR	|returns true if either expression is 1
 
+📝: Try your hand at SQL
+
+*Use the tracks table and provide tracknames that are from album id 4 and running time of more than 215000 milliseconds*
+
 ## Subquery
 ## EXISTS
 ## IS NULL
