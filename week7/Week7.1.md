@@ -208,6 +208,43 @@ The following table illustrates the SQLite logical operators:
 ### IS NULL
 
 ## Subquery
+A subquery is a SELECT statement nested in another statement. Typically, a subquery returns a single row as an atomic value, though it may return multiple rows for comparing values with the IN operator.
+You can use a subquery in the SELECT, FROM, WHERE, and JOIN clauses.
+
+### SQLite subquery in the WHERE clause example
+You can use a simple subquery as a search condition. 
+*Give me all the tracks in the album with the title  'Let There Be Rock'*
+
+```sql
+SELECT trackid,
+       name,
+       albumid
+FROM tracks
+WHERE albumid = (
+   SELECT albumid
+   FROM albums
+   WHERE title = 'Let There Be Rock'
+);
+```
+The subquery returns the id of the album with the title 'Let There Be Rock'. The query uses the equal operator (=) to compare albumid returned by the subquery with the  albumid in the tracks table.
+
+If the subquery returns multiple values, you can use the IN operator to check for the existence of a single value against a set of value.
+For example:-
+*Who are the customers whose sales representatives are in Canada?*
+
+```sql
+SELECT customerid,
+       firstname,
+       lastname
+  FROM customers
+ WHERE supportrepid IN (
+           SELECT employeeid
+             FROM employees
+            WHERE country = 'Canada'
+       );
+ ```
+
+### 
 
 
 
