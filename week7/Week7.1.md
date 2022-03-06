@@ -20,7 +20,7 @@ Before we sart the class let's take a look at the Chinook.db data model to grab 
 9. **Granularity** is a measure of the level of detail in a data structure. 
     - InvoiceLine is at the granularity of a Invoice, track and date
 
-| :memo:        | In the following sections we shall use a question asnwer type format to ask a business question and answer it with a SQL using the chinook.db practise database|
+| :memo:        | In the following sections we shall use a question answer type format to ask a business question and answer it with a SQL using the chinook.db practise database|
 |---------------|:------------------------|
 
 # Set Operations
