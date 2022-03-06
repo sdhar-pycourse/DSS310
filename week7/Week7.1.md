@@ -180,7 +180,7 @@ A comparison operator tests if two expressions are the same. The following table
 |Operator |Meaning
 |---------|-------|
 |=	|Equal to
-|<> or !=	|:Not equal to
+|<> or !=	|Not equal to
 |<	|Less than
 |>	|Greater than
 |<=	|Less than or equal to
