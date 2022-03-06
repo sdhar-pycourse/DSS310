@@ -172,8 +172,8 @@ In this example, you add a WHERE clause to the SELECT statement to filter rows r
 - Third, make the final result set based on the rows in the previous step with columns in the SELECT clause.
 
 Besides the SELECT statement, you can use the WHERE clause in the UPDATE and DELETE statements.
-## SQLite comparison operators
 
+## SQLite comparison operators
 A comparison operator tests if two expressions are the same. The following table illustrates the comparison operators that you can use to construct expressions:
 |Operator |Meaning
 |---------|-------|
@@ -243,8 +243,34 @@ SELECT customerid,
             WHERE country = 'Canada'
        );
  ```
+The subquery returns a list of ids of the employees who locate in Canada. The outer query uses the IN operator to find the customers who have the sales representative id in the list.
 
-### 
+### SQLite subquery in the FROM clause example
+Useful to apply aggregate functions to a column multiple times. 
+*What is the average size across all albums?*
+```sql
+SELECT AVG(SUM(bytes) 
+FROM tracks
+GROUP BY albumid;
+```
+:warning: The above query won't do it as the sum needs to be applied at a different levels, first summed across all tracks ina a album and then averaged across all albums
+
+```sql
+SELECT
+	AVG(album.size)
+FROM
+	(
+		SELECT
+			SUM(bytes) SIZE
+		FROM
+			tracks
+		GROUP BY
+			albumid
+	) AS album;
+```
+
+
+
 
 
 
