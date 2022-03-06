@@ -186,6 +186,23 @@ A comparison operator tests if two expressions are the same. The following table
 |<=	|Less than or equal to
 |>=	|Greater than or equal to
 
+### SQLite logical operators
+Logical operators allow you to test the truth of some expressions. A logical operator returns 1, 0, or a NULL value.
+Notice that SQLite does not provide Boolean data type therefore 1 means TRUE, and 0 means FALSE.
+
+The following table illustrates the SQLite logical operators:
+|Operator	|Meaning|
+|-----------|-------|
+|ALL	|returns 1 if all expressions are 1.
+|AND	|returns 1 if both expressions are 1, and 0 if one of the expressions is 0.
+|ANY	|returns 1 if any one of a set of comparisons is 1.
+|BETWEEN	|returns 1 if a value is within a range.
+|EXISTS	|returns 1 if a subquery contains any rows.
+|IN	|returns 1 if a value is in a list of values.
+|LIKE	|returns 1 if a value matches a pattern
+|NOT	|reverses the value of other operators such as NOT EXISTS, NOT IN, NOT BETWEEN, etc.
+|OR	|returns true if either expression is 1
+
 ## Subquery
 ## EXISTS
 ## IS NULL
