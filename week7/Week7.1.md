@@ -91,8 +91,6 @@ EXCEPT
 SELECT ArtistId
 FROM albums;
 ```
-
-
 # JOINS
 There are various kinds of SQLite joins to query data from two or more tables. An artist can have zero or many albums while an album belongs to one artist.
 
@@ -174,7 +172,7 @@ In this example, you add a WHERE clause to the SELECT statement to filter rows r
 - Third, make the final result set based on the rows in the previous step with columns in the SELECT clause.
 
 Besides the SELECT statement, you can use the WHERE clause in the UPDATE and DELETE statements.
-### SQLite comparison operators
+## SQLite comparison operators
 
 A comparison operator tests if two expressions are the same. The following table illustrates the comparison operators that you can use to construct expressions:
 |Operator |Meaning
@@ -186,7 +184,7 @@ A comparison operator tests if two expressions are the same. The following table
 |<=	|Less than or equal to
 |>=	|Greater than or equal to
 
-### SQLite logical operators
+## SQLite logical operators
 Logical operators allow you to test the truth of some expressions. A logical operator returns 1, 0, or a NULL value.
 Notice that SQLite does not provide Boolean data type therefore 1 means TRUE, and 0 means FALSE.
 
@@ -203,13 +201,16 @@ The following table illustrates the SQLite logical operators:
 |NOT	|reverses the value of other operators such as NOT EXISTS, NOT IN, NOT BETWEEN, etc.
 |OR	|returns true if either expression is 1
 
+### EXISTS
+### IS NULL
+
 📝: Try your hand at SQL
 
 *Use the tracks table and provide tracknames that are from album id 4 with length of more than 215000 milliseconds and less than 12000000 bytes*
 
 ## Subquery
-## EXISTS
-## IS NULL
+
+
 
 # Aggregate Functions
 # String Functions
