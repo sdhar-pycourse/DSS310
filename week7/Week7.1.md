@@ -277,8 +277,8 @@ The EXISTS operator is a logical operator that checks whether a subquery returns
 If the subquery returns one or more row, the EXISTS operator return true. Otherwise, the EXISTS operator returns false or NULL.
 Note that if the subquery returns one row with NULL, the result of the EXISTS operator is still true because the result set contains one row with NULL.
 To negate the EXISTS operator, you use the NOT EXISTS
-*What is the list of CustomerId, name and company who have a invoice?"
-'''sql
+*What is the list of CustomerId, name and company who have a invoice?*
+```sql
 SELECT
     CustomerId,
     FirstName,
