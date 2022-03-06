@@ -204,14 +204,16 @@ The following table illustrates the SQLite logical operators:
 📝: Try your hand at SQL
 
 *Use the tracks table and provide tracknames that are from album id 4 with length of more than 215000 milliseconds and less than 12000000 bytes*
-### EXISTS
-### IS NULL
 
-## Subquery
+
+### IS NULL
+# Aggregate Functions
+
+# Subquery
 A subquery is a SELECT statement nested in another statement. Typically, a subquery returns a single row as an atomic value, though it may return multiple rows for comparing values with the IN operator.
 You can use a subquery in the SELECT, FROM, WHERE, and JOIN clauses.
 
-### SQLite subquery in the WHERE clause example
+## SQLite subquery in the WHERE clause example
 You can use a simple subquery as a search condition. 
 *Give me all the tracks in the album with the title  'Let There Be Rock'*
 
@@ -245,7 +247,7 @@ SELECT customerid,
  ```
 The subquery returns a list of ids of the employees who locate in Canada. The outer query uses the IN operator to find the customers who have the sales representative id in the list.
 
-### SQLite subquery in the FROM clause example
+## SQLite subquery in the FROM clause example
 Useful to apply aggregate functions to a column multiple times. 
 *What is the average size across all albums?*
 ```sql
@@ -270,12 +272,35 @@ FROM
 ```
 :warning: Skipping correlated subquery as it is a slightly advanced topic
 
+## EXISTS
+The EXISTS operator is a logical operator that checks whether a subquery returns any row. In this syntax, the subquery is a SELECT statement that returns zero or more rows.
+If the subquery returns one or more row, the EXISTS operator return true. Otherwise, the EXISTS operator returns false or NULL.
+Note that if the subquery returns one row with NULL, the result of the EXISTS operator is still true because the result set contains one row with NULL.
+To negate the EXISTS operator, you use the NOT EXISTS
+*What is the list of CustomerId, name and company who have a invoice?"
+'''sql
+SELECT
+    CustomerId,
+    FirstName,
+    LastName,
+    Company
+FROM
+    Customers c
+WHERE
+    EXISTS (
+        SELECT 
+            1 
+        FROM 
+            Invoices
+        WHERE 
+            CustomerId = c.CustomerId
+    )
+ORDER BY
+    FirstName,
+    LastName;
+```
 
 
-
-
-
-# Aggregate Functions
 # String Functions
 # Window Functions
 
