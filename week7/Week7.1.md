@@ -166,6 +166,25 @@ The above query should return 20 rows of artists with 0 albums to their credit. 
 |---------------|:------------------------|
 
 # WHERE Clause 
+The WHERE clause is an optional clause of the SELECT statement. It appears after the FROM clause.
+In this example, you add a WHERE clause to the SELECT statement to filter rows returned by the query. When evaluating a SELECT statement with a WHERE clause, SQLite uses the following steps:
+
+- First, check the table in the FROM clause.
+- Second, evaluate the conditions in the WHERE clause to get the rows that met these conditions.
+- Third, make the final result set based on the rows in the previous step with columns in the SELECT clause.
+
+Besides the SELECT statement, you can use the WHERE clause in the UPDATE and DELETE statements.
+### SQLite comparison operators
+
+A comparison operator tests if two expressions are the same. The following table illustrates the comparison operators that you can use to construct expressions:
+|Operator |Meaning
+|---------|-------|
+|=	|Equal to
+|<> or !=	|:Not equal to
+|<	|Less than
+|>	|Greater than
+|<=	|Less than or equal to
+|>=	|Greater than or equal to
 
 ## Subquery
 ## EXISTS
