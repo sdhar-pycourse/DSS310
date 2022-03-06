@@ -205,7 +205,7 @@ The following table illustrates the SQLite logical operators:
 
 📝: Try your hand at SQL
 
-*Use the tracks table and provide tracknames that are from album id 4 and running time of more than 215000 milliseconds*
+*Use the tracks table and provide tracknames that are from album id 4 with length of more than 215000 milliseconds and less than 12000000 bytes*
 
 ## Subquery
 ## EXISTS
