@@ -221,12 +221,74 @@ WHERE
 ORDER BY 
     Name; 
 ```
-:Warning: '= NULL' is incorrect syntax. I is always going to be IS NULL
+
+⚠️: '= NULL' is incorrect syntax. It is always going to be IS NULL
 
 As a corollary there is also a IS NOT NULL syntax. You may want to write the converse of the above statement
 
 # Aggregate Functions
+Aggregate functions operate on a set of rows and return a single result. Aggregate functions are often used in conjunction with GROUP BY and HAVING clauses in the SELECT statement.
 
+SQLite provides the following aggregate functions:
+
+- AVG() – returns the average value of a group.
+- COUNT() – returns the number of rows that match a specified condition
+- MAX() – returns the maximum value in a group.
+- MIN() – returns the minimum value in a group
+- SUM() – returns the sum of values
+- GROUP_CONCAT(expression, separator) – returns a string that is the concatenation of all non-NULL values of the input expression separated by the separator.
+
+Examples:
+```sql
+SELECT
+    AlbumId,
+    COUNT(TrackId) track_count
+FROM
+    tracks
+GROUP BY
+    AlbumId
+ORDER BY
+    track_count DESC;
+```
+*What is the number of tracks and total minutes for each albumid?*
+
+```sql
+SELECT
+    AlbumId,
+    COUNT(TrackId) track_count,
+    SUM(Milliseconds) / 60000 Minutes
+FROM
+    tracks
+GROUP BY
+    AlbumId
+ORDER BY
+    track_count DESC;
+```
+
+*Find the tracks with the longest length of time*
+```sql
+SELECT
+    TrackId,
+    Name,
+    Milliseconds
+FROM
+    tracks
+WHERE 
+    Milliseconds =   (
+        SELECT
+            MAX(Milliseconds)
+        FROM
+            tracks)
+```
+*Give me a list of all tracks on albumid= 10*
+```sql
+   SELECT
+    GROUP_CONCAT(name, '| ')
+FROM
+    tracks
+WHERE   
+    AlbumId = 10;
+```
 # Subquery
 A subquery is a SELECT statement nested in another statement. Typically, a subquery returns a single row as an atomic value, though it may return multiple rows for comparing values with the IN operator.
 You can use a subquery in the SELECT, FROM, WHERE, and JOIN clauses.
