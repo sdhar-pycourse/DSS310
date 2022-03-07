@@ -226,6 +226,50 @@ ORDER BY
 
 As a corollary there is also a IS NOT NULL syntax. You may want to write the converse of the above statement
 
+### like
+Sometimes, you don’t know exactly the complete keyword that you want to query. For example, you may know that your most favorite song contains the word,elevator but you don’t know exactly the name. To query data based on partial information, you use the LIKE operator in the WHERE clause of the SELECT statement.
+
+SQLite provides two wildcards for constructing patterns. They are percent sign % and underscore _ :
+- The percent sign % wildcard matches any sequence of zero or more characters.
+  - The s% pattern that uses the percent sign wildcard ( %) matches any string that starts with s e.g.,son and so.
+  - The %er pattern matches any string that ends with er like peter, clever, etc.
+  - And the %per% pattern matches any string that contains per such as percent and peeper
+- The underscore _ wildcard matches any single character.
+  - The h_nt pattern matches hunt, hint, etc. The __pple pattern matches topple, supple, tipple, etc.
+🗒️ : that SQLite LIKE operator is case-insensitive. It means "A" LIKE "a" is true.
+
+*Find all the track names that start with 'Wild'*
+```sql
+SELECT
+	trackid,
+	name	
+FROM
+	tracks
+WHERE
+	name LIKE 'Wild%'
+```
+
+*Find the tracks whose names end with Wild*
+```sql
+SELECT
+	trackid,
+	name
+FROM
+	tracks
+WHERE
+	name LIKE '%Wild'
+```
+
+*Find the tracks whose names contain the Wild*
+```sql
+SELECT
+	trackid,
+	name	
+FROM
+	tracks
+WHERE
+	name LIKE '%Wild%';
+```
 # Aggregate Functions
 Aggregate functions operate on a set of rows and return a single result. Aggregate functions are often used in conjunction with GROUP BY and HAVING clauses in the SELECT statement.
 
@@ -392,6 +436,34 @@ ORDER BY
 - LOWER: Return a copy of a string with all of the characters converted to lowercase.
 - INSTR: Find a substring in a string and returns an integer indicating the position of the first occurrence of the substring.
 - Concatenation Operator ||: Concatenate two strings into a single string.
+
+:rocket: Run the queries below one by one and observe their action on the string
+
+```sql
+SELECT 
+   LTRIM(' SQLite '),
+   LENGTH(' SQLite ') LengthBefore,
+   LENGTH(LTRIM(' SQLite ')) LengthAfter;
+
+SELECT
+   RTRIM(' SQLite '),
+   LENGTH(' SQLite ') LengthBefore,
+   LENGTH(RTRIM(' SQLite ')) LengthAfter;
+   
+ SELECT 
+    REPLACE('These are string functions', 'These', 'Those')
+ 
+SELECT 
+    SUBSTR('SQLite String Functions', 1, 6);
+    
+ SELECT 
+    TRIM(' SQLite ');
+    
+ SELECT
+    UPPER('String Functions');
+ 
+ SELECT 'Concatenation ' || 'Operator';
+ ```
 
 # DATE Manipulation
 Often you may be asked to manipulate date ranges in SQL. Example:-
