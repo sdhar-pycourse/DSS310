@@ -41,6 +41,11 @@ SELECT count(id) from Customer
 WHERE Region= 'British Isles'
 ```
 
+## Question 4: 
+*How many Employees are based in 'North America'?*
+
+Now that is a change in pace!! Where can we find Employee information and their geography? 
+
 
 
 
