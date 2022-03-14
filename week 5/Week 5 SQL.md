@@ -14,11 +14,15 @@ limit 5
 *How many customers are there in the customer table?*
 
 Mark the changed semantics, *how many* so this must be a count. Count of what? Customers. What is the identifier/ primary key of customer table? **Id**
-Does CompanyName or any other field work? Well for the sake of this assignment I may give you the 1 point but in reality the primary key is the correct choice
+Does CompanyName or any other field work? Well for the sake of this assignment I may give you the 1 point but in reality the primary key is the correct choice.
+
 ```sql
 SELECT COUNT(Id) from Customer
 ```
 
 ## Question 3:
+*How many customers are from the 'British Isles'?*
+
+The only difference betwen Q2 is additional clause on *'British Isles'*. Where can we find the information on British Isles? The ideal way to find out the column name 
 
 
