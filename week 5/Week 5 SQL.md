@@ -62,8 +62,50 @@ FROM Region
 
 ## Question 6:
 *How many suppliers are based in the 'New Orleans'?*
+Count the Ids and not any other attributes in the table
 ```sql
+SELECT count(DISTINCT Id) as NOLASuppliers
+FROM Supplier 
+WHERE City= 'New Orleans'
 ```
+
+## Question 7:
+*Find all products that are Discontinued and has less than 10 UnitPrice*
+A SELECT * is fine or you could just show the product name
+```sql
+SELECT *
+FROM Product
+GROUP BY UnitPrice
+HAVING sum(UnitPrice) < 10 and Discontinued = 1
+```
+
+## Question 8:
+*From the OrderDetail table find the 'Total Order Amount'*
+What is Total Order Amount? 
+It has to have a quantity of order, actual price. Actual price is a fucntion of discount. So QuantityxActualPrice(1-Discount)
+```sql
+SELECT sum(UnitPrice*Quantity*(1-Discount)) as TotalOrderAmount
+FROM OrderDetail
+```
+🗒️: Some of you may have calcualted this at a order Id level or had addituonal attributes. Irrespective, I have tried to give full credit if I you got the basic formula correct
+
+## Question 9:
+*How many customers actually placed orders?*
+Where do we have customers related to orders? It is in the Order table
+```sql
+SELECT count(DISTINCT CustomerId) as Customers
+FROM 'Order'
+```
+⚠️: Order is a key word in SQLIte and requires a quote around the noun to make the SQL work
+
+## Question 10:
+*Find the Top 5 CusotmerIDs with the highest number of orders*
+
+Questions to ask yourself:
+- Highest number of what? Order Id. Therefore some kind of ```COUNT```
+- Top 5 who? Customers
+- 
+
 
 
 
