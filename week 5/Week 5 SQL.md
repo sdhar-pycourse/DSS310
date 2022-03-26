@@ -103,8 +103,16 @@ FROM 'Order'
 
 Questions to ask yourself:
 - Highest number of what? Order Id. Therefore some kind of ```COUNT```
-- Top 5 who? Customers
-- 
+- Top 5 who? Customers. Customer Name would be good, but for now without using ```JOIN``` CustomerId should work
+- ```FROM``` where can we get all this information? Order table
+```sql
+SELECT CustomerId, count(Id) as Orders
+FROM 'Order'
+GROUP BY CustomerId
+ORDER BY count(CustomerId) DESC
+LIMIT 5
+```
+
 
 
 
