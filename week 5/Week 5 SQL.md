@@ -46,10 +46,25 @@ WHERE Region= 'British Isles'
 
 Now that is a change in pace!! Where can we find Employee information and their geography? 
 ```sql
-SELECT count(DISTINCT id) as Region
+SELECT count(DISTINCT id) as NAEmployees
 FROM Employee 
 WHERE Region= 'North America'
 ```
+
+## Question 5:
+*Show all rows in the Region table*
+
+No surprises here. SELECT * gets you al the columns, no need to specify column names
+```sql
+SELECT *
+FROM Region
+```
+
+## Question 6:
+*How many suppliers are based in the 'New Orleans'?*
+```sql
+```
+
 
 
 
