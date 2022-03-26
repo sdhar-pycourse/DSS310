@@ -45,6 +45,11 @@ WHERE Region= 'British Isles'
 *How many Employees are based in 'North America'?*
 
 Now that is a change in pace!! Where can we find Employee information and their geography? 
+```sql
+SELECT count(DISTINCT id) as Region
+FROM Employee 
+WHERE Region= 'North America'
+```
 
 
 
