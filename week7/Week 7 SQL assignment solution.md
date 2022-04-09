@@ -81,14 +81,21 @@ INNER JOIN OrderDetail od ON od.OrderId = o.Id
 WHERE ShipCountry IN ('USA','Mexico', 'Canada')
 GROUP BY strftime('%Y',OrderDate), ShipCountry
 ```
+### Q7. Get all unique ShipNames from the Order table that contain a hyphen '-'
 
-## Q7. Get all unique ShipNames from the Order table that contain a hyphen '-'
+Containing a '-' is a wild card search 
+- ```LIKE``` 
+```sql
+SELECT ShipName
+FROM 'order'
+WHERE ShipName LIKE '%-%'
+```
 
-## Q8. Provide a descending list of top selling category and Shipping Country.
+### Q8. Provide a descending list of top selling category and Shipping Country.
 
-## Q9. Find the Top 5 Employee and Customer combination with the highest discount. 
+### Q9. Find the Top 5 Employee and Customer combination with the highest discount. 
 
-# Q10. How much order $ value comes from the same city as the Employee?
+### Q10. How much order $ value comes from the same city as the Employee?
 
 
 
