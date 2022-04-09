@@ -69,7 +69,10 @@ GROUP BY s.CompanyName
 
 ### Q6. Total annual $ and numbers of  order's ShipCountry is in North America. For our purposes, this is 'USA', 'Mexico', 'Canada' for each year
 
-- Total annual $ is the Total 
+- Total annual $ is the Total annual order $, number of orders is the count of orders
+- 'For each year' requires you to extract the year from the date field ```strftime('%Y',OrderDate)```
+- 'is in North America': requires that the countries are in North America and put in a ```where``` clause
+- You can actually skip adding the ```ShipCountry``` in the ```select``` clause if you want to
 
 ```sql
 SELECT ShipCountry, strftime('%Y',OrderDate) AS Year, round(SUM(od.UnitPrice*od.Quantity*(1-od.Discount)),1) as TotalAnnualOrders, count(o.Id) as NumberOfOrders
