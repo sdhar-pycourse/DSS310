@@ -69,6 +69,16 @@ GROUP BY s.CompanyName
 
 ### Q6. Total annual $ and numbers of  order's ShipCountry is in North America. For our purposes, this is 'USA', 'Mexico', 'Canada' for each year
 
+- Total annual $ is the Total 
+
+```sql
+SELECT ShipCountry, strftime('%Y',OrderDate) AS Year, round(SUM(od.UnitPrice*od.Quantity*(1-od.Discount)),1) as TotalAnnualOrders, count(o.Id) as NumberOfOrders
+FROM 'order' o
+INNER JOIN OrderDetail od ON od.OrderId = o.Id
+WHERE ShipCountry IN ('USA','Mexico', 'Canada')
+GROUP BY strftime('%Y',OrderDate), ShipCountry
+```
+
 ## Q7. Get all unique ShipNames from the Order table that contain a hyphen '-'
 
 ## Q8. Provide a descending list of top selling category and Shipping Country.
