@@ -44,7 +44,17 @@ where (OrderDate BETWEEN '2012-01-01' AND '2012-12-31') and o.employeeid in (
   or t.TerritoryDescription= 'Cambridge')
 ```
 
-## Q4. Which customers haven't ever ordered anything?
+### Q4. Which customers haven't ever ordered anything?
+
+This is customers i the customer table ```EXCEPT``` customers in the order table. Omce you can find in the customwr table and not in the order table
+
+```sql
+SELECT Id
+FROM Customer
+EXCEPT
+SELECT CustomerId
+FROM 'order'
+```
 
 ## Q5. For each Shipper, find the $ value of orders which are late?
 
