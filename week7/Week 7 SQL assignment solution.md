@@ -22,14 +22,26 @@ LIMIT 5
 ⚠️ The term greater than 10 products refers to the category that has more than 10 products and not the ```UnitsOnOrder``` greater than 10
 
 ```sql
-SELECT CategoryName, round(AVG(UnitPrice),2) AS Average, MIN(UnitPrice) AS MinimumUnitPrice, MAX(UnitPrice) AS MaximumUnitPrice, count(UnitsOnOrder) AS NumberOfProducts, SUM(UnitsOnOrder) AS UnitsOnOrder
+SELECT CategoryName, count(p.Id), round(AVG(UnitPrice),2) AS Average, MIN(UnitPrice) AS MinimumUnitPrice, MAX(UnitPrice) AS MaximumUnitPrice, count(UnitsOnOrder) AS NumberOfProducts, SUM(UnitsOnOrder) AS UnitsOnOrder
 FROM Category c
 LEFT JOIN Product p ON p.CategoryId = c.Id
 GROUP BY CategoryId
-HAVING count(c.Id) > 10
+HAVING count(p.Id) > 10
 ```
 
-## Q3. What is the total $ orders handled by employees of the Cambridge, Boston and Braintree territory in 2010? 
+### Q3. What is the total $ orders handled by employees of the Cambridge, Boston and Braintree territory in 2010? 
+Look at the relationship between Employee and EmployeeTerritories. Employee to Order is 1:M and that with EmployeeTerritories is 1:M. Employee is top of the hierarchy. Therefore you need a seperate query to fetch the Employees in the 3 territories mentioned in the question and then search for them in the main query. Hence you need a subquery.
+```sql
+select count(distinct o.id) as Orders, SUM(UnitPrice*Quantity*(1-Discount)) AS 'Total$'
+from 'ORDER' o
+INNER JOIN OrderDetail od ON od.OrderId = o.Id
+where (OrderDate BETWEEN '2012-01-01' AND '2012-12-31') and o.employeeid in (
+  select DISTINCT et.EmployeeId
+  from EmployeeTerritory et
+  inner join Territory t on et.TerritoryId = t.Id
+  where t.TerritoryDescription= 'Braintree' or t.territorydescription= 'Boston' 
+  or t.TerritoryDescription= 'Cambridge')
+```
 
 ## Q4. Which customers haven't ever ordered anything?
 
