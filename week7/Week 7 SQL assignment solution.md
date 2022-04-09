@@ -83,8 +83,9 @@ GROUP BY strftime('%Y',OrderDate), ShipCountry
 ```
 ### Q7. Get all unique ShipNames from the Order table that contain a hyphen '-'
 
-Containing a '-' is a wild card search 
-- ```LIKE``` 
+Containing a '-' is a wild card search
+- ```LIKE``` is to find anything like
+- The % in '%-%' means anything before or after the '-' So any name with a hyphen in between would be fetched
 ```sql
 SELECT ShipName
 FROM 'order'
@@ -93,9 +94,42 @@ WHERE ShipName LIKE '%-%'
 
 ### Q8. Provide a descending list of top selling category and Shipping Country.
 
+This is a combination of Categorynames and Ship country. So you need both in the ```SELECT``` clause
+```sql
+SELECT CategoryName, o.ShipCountry, round(SUM(od.UnitPrice*od.Quantity*(1-od.Discount)),1) AS TopSellingCategory
+FROM Category c
+INNER JOIN Product p ON p.CategoryId = c.Id
+INNER JOIN OrderDetail od ON od.ProductId = p.Id
+INNER JOIN 'order' o ON o.Id = od.OrderId
+GROUP BY CategoryName, o.ShipCountry
+Order BY SUM(od.UnitPrice*od.Quantity*(1-od.Discount)) DESC
+```
+
 ### Q9. Find the Top 5 Employee and Customer combination with the highest discount. 
 
+- The discount is the corollary of the actual expenditure as a result substitute the (1- od.Discount) with od.Discount
+- Again, Employee and Customer are 2 combos and hence need to be ```SELECT``` clause
+```sql
+SELECT EmployeeId, CustomerId, sum(od.UnitPrice*od.Quantity*od.Discount) as Discount
+FROM Employee e
+INNER JOIN 'order' o ON o.EmployeeId = e.Id
+INNER JOIN OrderDetail od ON od.OrderId = o.Id
+GROUP BY CustomerId, EmployeeId
+ORDER BY
+sum(od.UnitPrice*Quantity*Discount) DESC
+LIMIT 5
+```
+
 ### Q10. How much order $ value comes from the same city as the Employee?
+
+```sql
+SELECT o.EmployeeId, e.city, SUM(od.UnitPrice*od.Quantity*(1-od.Discount)) as Sold
+FROM Employee e
+INNER JOIN 'order' o ON o.EmployeeId = e.Id
+INNER JOIN OrderDetail od ON od.OrderId = o.Id
+WHERE o.ShipCity = e.City
+GROUP by o.EmployeeId, e.city
+```
 
 
 
