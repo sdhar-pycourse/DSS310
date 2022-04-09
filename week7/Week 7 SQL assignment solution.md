@@ -4,7 +4,18 @@ The following is the ER diagram for reference.
 ▶️ is the direction of 1 in 1:M relationships
 ![pict](https://documentation.red-gate.com/dms6/files/49646072/49646073/3/1559655630714/ERDiagramNorthwind.png)
 
-## Q1. For each Customer, get the CompanyName, CustomerId, and "total expenditures". Output the bottom 5 Customers, as measured by total expenditures.
+### Q1. For each Customer, get the CompanyName, CustomerId, and "total expenditures". Output the bottom 5 Customers, as measured by total expenditures.
+🗒️ Last assignment we had defined what TotalExpenditure is defined as ```SUM(UnitPrice*Quantity*(1-Discount))```
+```sql
+SELECT CompanyName, CustomerId, SUM(UnitPrice*Quantity*(1-Discount)) as TotalExpenditures
+FROM Customer c
+INNER JOIN 'order' o ON o.CustomerId = c.Id
+INNER JOIN OrderDetail od ON od.OrderId = o.Id
+GROUP by OrderId
+ORDER BY
+SUM(UnitPrice*Quantity*(1-Discount)) ASC
+LIMIT 5
+```
 
 ## Q2. Get the number of products, average unit price (rounded to 2 decimal places), minimum unit price, maximum unit price, and total units on order for categories containing greater than 10 products
 
