@@ -7,7 +7,7 @@ The following is the ER diagram for reference.
 ### Q1. For each Customer, get the CompanyName, CustomerId, and "total expenditures". Output the bottom 5 Customers, as measured by total expenditures.
 🗒️ Last assignment we had defined what TotalExpenditure is defined as ```SUM(UnitPrice*Quantity*(1-Discount))```
 ```sql
-SELECT CompanyName, CustomerId, SUM(UnitPrice*Quantity*(1-Discount)) as TotalExpenditures
+SELECT CompanyName, CustomerId, SUM(od.UnitPrice*od.Quantity*(1-od.Discount)) as TotalExpenditures
 FROM Customer c
 INNER JOIN 'order' o ON o.CustomerId = c.Id
 INNER JOIN OrderDetail od ON od.OrderId = o.Id
@@ -56,9 +56,18 @@ SELECT CustomerId
 FROM 'order'
 ```
 
-## Q5. For each Shipper, find the $ value of orders which are late?
+### Q5. For each Shipper, find the $ value of orders which are late?
 
-## Q6. Total annual $ and numbers of  order's ShipCountry is in North America. For our purposes, this is 'USA', 'Mexico', 'Canada' for each year
+```sql
+SELECT s.CompanyName, s.Id, SUM(od.UnitPrice*od.Quantity*(1-od.Discount)) as Value
+FROM Shipper s
+INNER JOIN 'order' o ON o.ShipVia = s.Id
+INNER JOIN OrderDetail od ON od.OrderId = o.Id
+WHERE o.ShippedDate > o.RequiredDate
+GROUP BY s.CompanyName
+```
+
+### Q6. Total annual $ and numbers of  order's ShipCountry is in North America. For our purposes, this is 'USA', 'Mexico', 'Canada' for each year
 
 ## Q7. Get all unique ShipNames from the Order table that contain a hyphen '-'
 
